@@ -3,7 +3,6 @@ let container = document.getElementById("searchResults");
 let loader = document.getElementById("spinner");
 
 function add(search_results) {
-    container.textContent="";
     let head = document.createElement("p");
     head.textContent = "Popular Books";
     container.appendChild(head);
@@ -29,6 +28,7 @@ function add(search_results) {
 }
 
 function fetchdata(event) {
+    container.textContainer="";
     if (event.key === 'Enter') {
         let option = {
             method: "GET"
